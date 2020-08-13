@@ -16,8 +16,10 @@ teams.forEach(team => ranks.push({
   pointsFor: 0,
   pointsAgainst: 0,
 }))
+const teamNameMax = Math.max(...teams.map(team => team.length))
 // copy to nascar ranks for separate tracking
 const nascarRanks = ranks.map(team => {return {...team}})
+
 
 // only consider scoring weeks from arguments
 const weeks = Object.keys(resultsJSON).filter(week => (Object.values(resultsJSON[week]).reduce((a,b) => a + b)) > 0).slice(0, week);
@@ -69,14 +71,32 @@ let txt = '';
 ranks.forEach((team, i) => {
   let avPf = Math.round(((team.pointsFor / (3 * weeks.length)) + Number.EPSILON) * 100) / 100;
   let avPa = Math.round(((team.pointsAgainst / (3 * weeks.length)) + Number.EPSILON) * 100) / 100;
-  txt += `${i + 1}: ${team.team} ${team.wins}-${team.losses}-${team.ties} -- ${avPf} - ${avPa} \n`;
+  let spaces = teamNameMax - team.team.length;
+  let spaceStr = '';
+  for (let j = 0; j < spaces; j++) {
+    spaceStr = spaceStr + ' ';
+  }
+  let winStr = '';
+  let lossStr = '';
+  if (team.wins < 10) winStr += ' ';
+  if (team.losses < 10) lossStr += ' ';
+  txt += `${i + 1}: ${team.team}${spaceStr}${i + 1 < 10 ? ' ' : ''} ${winStr}${team.wins} - ${lossStr}${team.losses} - ${team.ties} -- ${avPf} - ${avPa} \n`;
 });
 
 let nascarTxt = '';
 nascarRanks.forEach((team, i) => {
   let avPf = Math.round(((team.pointsFor / (11 * weeks.length)) + Number.EPSILON) * 100) / 100;
   let avPa = Math.round(((team.pointsAgainst / (11 * weeks.length)) + Number.EPSILON) * 100) / 100;
-  nascarTxt += `${i + 1}: ${team.team} ${team.wins}-${team.losses}-${team.ties} -- ${avPf} - ${avPa} \n`;
+  let spaces = teamNameMax - team.team.length;
+  let spaceStr = '';
+  for (let j = 0; j < spaces; j++) {
+    spaceStr = spaceStr + ' ';
+  }
+  let recordStr = ''
+  if (team.wins >= 10) recordStr += ' ';
+  if (team.losses >= 9) recordStr += ' ';
+
+  nascarTxt += `${i + 1}: ${team.team}${spaceStr}${i + 1 < 10 ? ' ' : ''} ${team.wins}-${team.losses}-${team.ties}${recordStr} -- ${avPf} - ${avPa} \n`;
 });
 
 fs.writeFile(`week${week}.txt`, txt, function (err) {

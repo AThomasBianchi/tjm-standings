@@ -80,7 +80,12 @@ ranks.forEach((team, i) => {
   let lossStr = '';
   if (team.wins < 10) winStr += ' ';
   if (team.losses < 10) lossStr += ' ';
-  txt += `${i + 1}: ${team.team}${spaceStr}${i + 1 < 10 ? ' ' : ''} ${winStr}${team.wins} - ${lossStr}${team.losses} - ${team.ties} -- ${avPf} - ${avPa} \n`;
+  let pfStr = '';
+  for (let i = avPf.toString().length; i < 6; i++) {
+    pfStr += ' '
+  }
+  
+  txt += `${i + 1}: ${team.team}${spaceStr}${i + 1 < 10 ? ' ' : ''} ${winStr}${team.wins} -${lossStr}${team.losses} - ${team.ties} -- ${avPf}${pfStr} - ${avPa} \n`;
 });
 
 let nascarTxt = '';
@@ -96,7 +101,9 @@ nascarRanks.forEach((team, i) => {
   if (team.wins >= 10) recordStr += ' ';
   if (team.losses >= 9) recordStr += ' ';
 
-  nascarTxt += `${i + 1}: ${team.team}${spaceStr}${i + 1 < 10 ? ' ' : ''} ${team.wins}-${team.losses}-${team.ties}${recordStr} -- ${avPf} - ${avPa} \n`;
+
+
+  nascarTxt += `${i + 1}: ${team.team}${spaceStr}${i + 1 < 10 ? ' ' : ''} ${team.wins < 10 ? ' ' : ''}${team.wins}-${team.losses < 10 ? ' ': ''}${team.losses}-${team.ties} -- ${avPf} - ${avPa} \n`;
 });
 
 fs.writeFile(`week${week}.txt`, txt, function (err) {

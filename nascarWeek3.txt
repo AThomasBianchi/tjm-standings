@@ -1,12 +1,12 @@
-1: Springfield Zephyrs   29-4-0  -- 358.5 - 295.21 
-2: Orlando Renegades     27-6-0  -- 342.22 - 296.69 
-3: Structure Fire        19-14-0   -- 317 - 298.98 
-4: Dip City Thunder      19-14-0   -- 309.61 - 299.66 
-5: West Coast Spartans   19-14-0   -- 298.5 - 300.67 
-6: Ryno World            15-18-0   -- 301.72 - 300.37 
-7: The Cheating Raiders  14-19-0   -- 290.67 - 301.38 
-8: Young Bucks           13-20-0   -- 281.11 - 302.25 
-9: Midtown Jaguars       13-20-0   -- 278.33 - 302.5 
-10: Country Strong       11-22-0   -- 270 - 303.26 
-11: Detroit Nittany Tide 10-23-0   -- 282.44 - 302.13 
-12: Bayou Shooters       9-24-0  -- 275.72 - 302.74 
+1: Springfield Zephyrs   29- 4-0 -- 416.83 - 356.89 
+2: Orlando Renegades     24- 9-0 -- 394.61 - 358.91 
+3: West Coast Spartans   19-14-0 -- 369.67 - 361.18 
+4: Ryno World            19-14-0 -- 368.89 - 361.25 
+5: Structure Fire        17-16-0 -- 374.72 - 360.72 
+6: The Cheating Raiders  17-16-0 -- 357.44 - 362.29 
+7: Country Strong        17-16-0 -- 346.39 - 363.3 
+8: Dip City Thunder      16-17-0 -- 365.11 - 361.6 
+9: Midtown Jaguars       11-22-0 -- 335.17 - 364.32 
+10: Bayou Shooters       10-23-0 -- 343.33 - 363.58 
+11: Young Bucks          10-23-0 -- 332.83 - 364.53 
+12: Detroit Nittany Tide  9-24-0 -- 337.67 - 364.09 

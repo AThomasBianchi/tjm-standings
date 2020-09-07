@@ -1,0 +1,12 @@
+1: Springfield Zephyrs   10 - 2 - 0 -- 383.42 - 333.9 
+2: Orlando Renegades      8 - 4 - 0 -- 385.71 - 357.26 
+3: The Cheating Raiders   8 - 4 - 0 -- 369    - 364.33 
+4: Ryno World             8 - 4 - 0 -- 367.71 - 360.86 
+5: Dip City Thunder       7 - 5 - 0 -- 350.67 - 334.92 
+6: Country Strong         7 - 5 - 0 -- 343.42 - 352.95 
+7: Structure Fire         5 - 7 - 0 -- 345.59 - 343.67 
+8: Bayou Shooters         5 - 7 - 0 -- 331.42 - 334.99 
+9: West Coast Spartans    4 - 8 - 0 -- 340.38 - 353.4 
+10: Detroit Nittany Tide  4 - 8 - 0 -- 329.88 - 353 
+11: Midtown Jaguars       4 - 8 - 0 -- 318.79 - 341.64 
+12: Young Bucks           2 -10 - 0 -- 333.04 - 368.08 
